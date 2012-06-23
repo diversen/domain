@@ -33,4 +33,12 @@ The exact placement of this file is set in domain.ini. E.g.:
     domain_apache2_serveralias_file = "/home/dennis/apache.conf"
 
 You will need to add a system cron line that reloads apache2 once in a while. 
-And you need to have a user cron job that recreates the ServerAlias File
+And you need to have a user cron job that recreates the ServerAlias File. The
+recreation is done with the commandline tool coscli.sh, e.g.:
+
+    ./coscli.sh domain --up
+
+Like this as a cron line: 
+
+    /home/dennis/www/mysite.com/coscli.sh domain --up
+
