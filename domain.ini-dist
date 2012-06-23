@@ -1,0 +1,2 @@
+domain_allow = 'user'
+domain_apache2_serveralias_file = '/home/dennis/apache.conf'
