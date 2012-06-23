@@ -155,6 +155,7 @@ class domain {
         $file = _COS_PATH . "/config/multi/$master/config.ini";
         $master_conf = config::getIniFileArray($file, true);
         $master_conf['server_name'] = $domain;
+        $master_conf['server_redirect'] = $domain;
         
         // ini array to string
         $str = config::arrayToIniFile($master_conf);

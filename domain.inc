@@ -8,8 +8,10 @@ function domain_update_db () {
     $rows = $d->getAll();
     $str = '';
     foreach ($rows as $row) {
-        $str.= $row['host'] . "\n";
+        $str.= "ServerAlias " . $row['host'] . "\n";
     } 
+    $apache_conf = mainCli::$ini['domain']['domain_apache2_serveralias_file'];
+    file_put_contents($apache_conf, $str);
     print $str;
 }
 
