@@ -156,7 +156,7 @@ class domain {
         $master_conf = config::getIniFileArray($file, true);
         $master_conf['server_name'] = $domain;
         $master_conf['server_redirect'] = $domain;
-        
+        $master_conf['master'] = 0;
         // ini array to string
         $str = config::arrayToIniFile($master_conf);
         
