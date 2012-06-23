@@ -22,3 +22,7 @@ $_COS_LANG_MODULE['domain_info_allow_create_ip'] = 'For at dit domæne skal vise
 $_COS_LANG_MODULE['domain_delete_info'] = 'Slet tilknyttet domæne: %1%';
 
 $_COS_LANG_MODULE['domain_delete_domain'] = 'Slet domæne';
+
+$_COS_LANG_MODULE['domain_error_no_master_config'] = 'Ingen master configuration';
+
+$_COS_LANG_MODULE['domain_error_not_valid_name'] = 'Ikke et gyldig domæne navn';

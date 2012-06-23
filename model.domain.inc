@@ -27,6 +27,10 @@ class domain {
         $this->db->connect($config);
     }
     
+    public function getAll () {
+        return $this->db->selectAll('domain', 'host');
+    }
+    
     public function displayDeleteForm ($row) {
         echo lang::translate('domain_delete_info', array ($row['host']));
         echo formHelpers::confirmDeleteForm('submit_delete', 
@@ -96,14 +100,14 @@ class domain {
         
         $ary = explode(".", $host);
         if (count($ary) < 2) {
-            $this->errors[] = 'Domain have to have at least two parts';
+            $this->errors[] = lang::translate('domain_error_not_valid_name');
             return;
         }
         
         // validate parts
         foreach ($ary as $subject) {
             if (!preg_match(('/^([a-zA-Z0-9-]+)$/'), $subject)) {
-                $this->errors[] = 'Not a valid domain name';
+                $this->errors[] = lang::translate('domain_error_not_valid_name');
                 return;
             }
         }
@@ -111,7 +115,8 @@ class domain {
         $server_name = config::getMainIni('server_name');
         $master_config = _COS_PATH . "/config/multi/$server_name/config.ini";
         if (!file_exists($master_config)) {
-            $this->errors[] = "Master config does not exists: $server_name";
+            $this->errors[] = lang::translate('domain_error_no_master_config') . ' ' .   
+                    $server_name;
             return;
         }
         
