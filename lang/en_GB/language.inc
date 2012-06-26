@@ -2,17 +2,22 @@
 
 // Translation of file ./modules/domain/create.php
 
-$_COS_LANG_MODULE['siteclone_rpc_ini_file_exists'] = 'siteclone_rpc_ini_file_exists';
-$_COS_LANG_MODULE['siteclone_rpc_could_not_make_ini_file'] = 'siteclone_rpc_could_not_make_ini_file';
-$_COS_LANG_MODULE['siteclone_rpc_ini_file_created'] = 'siteclone_rpc_ini_file_created';
-// Translation of file ./modules/domain/model.domain.inc
 
-$_COS_LANG_MODULE['domain_confirm_delete_legend'] = 'domain_confirm_delete_legend';
-$_COS_LANG_MODULE['domain_can_not_add_domain_to_non_master'] = 'domain_can_not_add_domain_to_non_master';
-$_COS_LANG_MODULE['domain_info_deny_create'] = 'domain_info_deny_create';
-$_COS_LANG_MODULE['domain_hostname_exists'] = 'domain_hostname_exists';
-$_COS_LANG_MODULE['domain_add_domain'] = 'domain_add_domain';
+$_COS_LANG_MODULE['domain_confirm_delete_legend'] = 'Confirm to delete domain';
+$_COS_LANG_MODULE['domain_can_not_add_domain_to_non_master'] = 'You can only add a domain to a master domain';
+$_COS_LANG_MODULE['domain_info_deny_create'] = 'Your can not create a domain';
+$_COS_LANG_MODULE['domain_hostname_exists'] = 'Hostname exists';
+$_COS_LANG_MODULE['domain_add_domain'] = 'Add domain';
 // Translation of file ./modules/domain/index.php
 
-$_COS_LANG_MODULE['domain_deleted_action_message'] = 'domain_deleted_action_message';
-$_COS_LANG_MODULE['domain_added'] = 'domain_added';
+$_COS_LANG_MODULE['domain_deleted_action_message'] = 'Domain has been deleted';
+$_COS_LANG_MODULE['domain_added'] = 'Domain has been added';
+
+$_COS_LANG_MODULE['domain_info_allow_create'] = "You can add a domain name for your website (%1%). 
+    The name of the domain must be like 'eksample.com' og 'www.example.com'. E.g.: 'test.example.com'. Characters 'a-z' og '0-9' and '-' are allowed. 
+    <b>Only one domain name allowed</b>";
+
+$_COS_LANG_MODULE['domain_delete_domain'] = 'Deleted domain';
+$_COS_LANG_MODULE['domain_info_allow_create_ip'] = 'You need a DNS A record pointing to this address';
+$_COS_LANG_MODULE['domain_error_not_valid_name'] = 'Not a valid name';
+$_COS_LANG_MODULE['domain_error_no_master_config'] = 'No master config was found';

@@ -12,7 +12,6 @@ function domain_update_db () {
     } 
     $apache_conf = mainCli::$ini['domain']['domain_apache2_serveralias_file'];
     file_put_contents($apache_conf, $str);
-    print $str;
 }
 
 mainCli::setCommand('domain', array(
