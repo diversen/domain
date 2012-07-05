@@ -54,6 +54,10 @@ class domain {
         
         if (!empty($row)) {
             headline_message(lang::translate('domain_delete_domain'));
+            echo lang::translate('domain_info_allow_create_ip');
+            echo "<br />";
+            echo $_SERVER['SERVER_ADDR'];
+            echo "<br />\n";
             $this->displayDeleteForm($row);
             return false;
         }

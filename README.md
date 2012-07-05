@@ -38,7 +38,8 @@ recreation is done with the commandline tool coscli.sh, e.g.:
 
     ./coscli.sh domain --up
 
-Like this as a cron line: 
+Like this as a cron line (every hour in the 30th minute): 
 
-    /home/dennis/www/mysite.com/coscli.sh domain --up
+    30 * * * * php /home/dennis/www/example.com/coscli.sh domain --up
+
 
