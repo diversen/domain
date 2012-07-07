@@ -42,4 +42,7 @@ Like this as a cron line (every hour in the 30th minute):
 
     30 * * * * php /home/dennis/www/example.com/coscli.sh domain --up
 
+You will off course also want a reload of apache2. Place the following in 
+/etc/crontab
 
+    35 * * * * root /etc/init.d/apache2 restart > /dev/null 2>&1

@@ -53,7 +53,7 @@ class domain {
         $row = $this->getRowFromServername ();
         
         if (!empty($row)) {
-            headline_message(lang::translate('domain_delete_domain'));
+            //headline_message(lang::translate('domain_delete_domain'));
             echo lang::translate('domain_info_allow_create_ip');
             echo "<br />";
             echo $_SERVER['SERVER_ADDR'];
@@ -161,6 +161,7 @@ class domain {
         $master_conf['server_name'] = $domain;
         $master_conf['server_redirect'] = $domain;
         $master_conf['master'] = 0;
+        $master_conf['robots'] = 'index follow';
         // ini array to string
         $str = config::arrayToIniFile($master_conf);
         
