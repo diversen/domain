@@ -159,9 +159,10 @@ class domain {
         $file = _COS_PATH . "/config/multi/$master/config.ini";
         $master_conf = config::getIniFileArray($file, true);
         $master_conf['server_name'] = $domain;
+        $master_conf['server_name_master'] = $master;
         $master_conf['server_redirect'] = $domain;
         $master_conf['master'] = 0;
-        $master_conf['robots'] = 'index follow';
+        $master_conf['robots'] = 'index, follow';
         // ini array to string
         $str = config::arrayToIniFile($master_conf);
         
