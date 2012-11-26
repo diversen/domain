@@ -23,12 +23,17 @@ class domain {
         $file = _COS_PATH . "/config/config.ini";
         $config = config::getIniFileArray($file, true);
 
-        $this->db = new db();
-        $this->db->connect($config);
+        //print_r( $config);
+        //$this->db = new db();
+        //$this->db->connect();
     }
     
     public function getAll () {
-        return $this->db->selectAll('domain', 'host');
+        //return $this->db->selectAll('domain', 'host');
+        echo config::getMainIni('url');
+        $rows = dbQ::setSelect('domain')->fetch();
+        print_r($rows);
+        die;
     }
     
     public function displayDeleteForm ($row) {

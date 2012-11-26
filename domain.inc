@@ -6,6 +6,7 @@ include_module ('domain');
 function domain_update_db () {
     $d = new domain ();
     $rows = $d->getAll();
+    //print_r($rows);
     $str = '';
     foreach ($rows as $row) {
         $str.= "ServerAlias " . $row['host'] . "\n";
