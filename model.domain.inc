@@ -24,16 +24,13 @@ class domain {
         $config = config::getIniFileArray($file, true);
 
         //print_r( $config);
+        
         $this->db = new db();
-        $this->db->connect();
+        $this->db->connect($config);
     }
     
     public function getAll () {
         return $this->db->selectAll('domain', 'host');
-        //echo config::getMainIni('url');
-        //$rows = dbQ::setSelect('domain')->fetch();
-        //print_r($rows);
-        //die;
     }
     
     public function displayDeleteForm ($row) {
