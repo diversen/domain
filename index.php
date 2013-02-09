@@ -13,7 +13,7 @@ if (isset($_POST['submit_delete'])) {
         session::setActionMessage(lang::translate('domain_deleted_action_message'));
         http::locationHeader('/domain/index');
     } else {
-        cos_error_log('Error: Creating domain name');
+        log::error('Error: Creating domain name');
     }
 }
 
@@ -31,11 +31,13 @@ if (isset($_POST['submit'])) {
             session::setActionMessage(lang::translate('domain_added'));
             http::locationHeader('/domain/index');
         } else {
-            cos_error_log('Error: Creating domain name');
+            log::error('Error: Creating domain name');
         }
     } else {
-        view_form_errors($d->errors);
+        html::errors($d->errors);
     }
 }
 
 $d->form();
+
+

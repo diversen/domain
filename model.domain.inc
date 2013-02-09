@@ -1,7 +1,5 @@
 <?php
 
-include_once "coslib/form_helpers.php";
-
 class domain {
     
     /**
@@ -66,7 +64,7 @@ class domain {
         
         $server_name = config::getMainIni('server_name');
         if (empty($row)) {
-            headline_message(lang::translate('domain_add_domain'));
+            html::headline(lang::translate('domain_add_domain'));
             echo lang::translate('domain_info_allow_create', array ($server_name));
             echo "<br />";
             echo lang::translate('domain_info_allow_create_ip');
@@ -89,12 +87,12 @@ class domain {
     function delete () {
         $row = $this->getRowFromServerName();
         if (empty($row['host'])) {
-            cos_error_log('Should not happen');
+            log::error('Should not happen');
             return;
         }
         
         $path = _COS_PATH . "/config/multi/$row[host]";
-        rrmdir($path);
+        file::rrmdir($path);
         return $this->db->delete('domain', 'host', $row['host']);
     }
 
