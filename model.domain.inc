@@ -33,7 +33,7 @@ class domain {
     
     public function displayDeleteForm ($row) {
         echo lang::translate('domain_delete_info', array ($row['host']));
-        echo formHelpers::confirmDeleteForm('submit_delete', 
+        echo html_helpers::confirmDeleteForm('submit_delete', 
                 lang::translate('domain_confirm_delete_legend'));
 
     }
