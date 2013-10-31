@@ -32,7 +32,7 @@ class domain {
     }
     
     public function displayDeleteForm ($row) {
-        echo lang::translate('domain_delete_info', array ($row['host']));
+        echo lang::translate('domain_delete_info', array ('DOMAIN' => $row['host']));
         echo html_helpers::confirmDeleteForm('submit_delete', 
                 lang::translate('domain_confirm_delete_legend'));
 
@@ -86,14 +86,17 @@ class domain {
     
     function delete () {
         $row = $this->getRowFromServerName();
-        if (empty($row['host'])) {
+
+	if (empty($row['host'])) {
             log::error('Should not happen');
             return;
         }
+
         
         $path = _COS_PATH . "/config/multi/$row[host]";
         file::rrmdir($path);
         return $this->db->delete('domain', 'host', $row['host']);
+
     }
 
     /**

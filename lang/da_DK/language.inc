@@ -28,7 +28,7 @@ $_COS_LANG_MODULE['domain_info_allow_create_ip'] = '
     For at dit domæne navn skal vise samme sider
     som denne URL,
     skal du lade en record (typisk en type A) pege på følgende IP: ';
-$_COS_LANG_MODULE['domain_delete_info'] = 'Slet tilknyttet domæne: %1%';
+$_COS_LANG_MODULE['domain_delete_info'] = 'Slet tilknyttet domæne: {DOMAIN}';
 
 $_COS_LANG_MODULE['domain_delete_domain'] = 'Slet domæne';
 

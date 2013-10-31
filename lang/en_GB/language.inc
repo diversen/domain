@@ -13,7 +13,7 @@ $_COS_LANG_MODULE['domain_add_domain'] = 'Add domain';
 $_COS_LANG_MODULE['domain_deleted_action_message'] = 'Domain has been deleted';
 $_COS_LANG_MODULE['domain_added'] = 'Domain has been added';
 
-$_COS_LANG_MODULE['domain_delete_info'] = 'Domain name: %1%';
+$_COS_LANG_MODULE['domain_delete_info'] = 'Domain name: {DOMAIN}';
 
 $_COS_LANG_MODULE['domain_info_allow_create'] = "You can add a domain name for your website (%1%). 
     The name of the domain must be like 'eksample.com' og 'www.example.com'. E.g.: 'test.example.com'. Characters 'a-z' og '0-9' and '-' are allowed. 
